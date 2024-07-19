@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.barlow-condensed-extrabold {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* NAV BAR */
+nav {
+    position: fixed;
+    font-family: "Barlow Condensed", sans-serif;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 5px 0;
+    background: rgba(0, 0, 0, 0.7); /* Initial opacity */
+    transition: background 0.5s;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+#push-right {
+    margin-left: auto;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+}
+
+.hero h1 {
+    position: relative;
+    font-size: 40vw;
+    font-family: "Barlow Condensed", sans-serif;
+    color: white;
+    margin: 0;
+    -webkit-text-stroke: 2px white;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.5s ease;
+}
+
+.hero h1::before {
+    content: 'MASON';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('keyboard.jpg');
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hero h1:hover::before {
+    opacity: 1;
+}
+
+.hero h1:hover {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero h2 {
+    font-size: 4vw;
+    color: white;
+    margin-top: 5px;
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+/* ABOUT SECTION */
+
+.section-about {
+    background-color: rgb(108, 106, 106);
+}
+
+.section-portfolio {
+    background-color: gainsboro;
+}
+
+.section-contact {
+    background-color: white;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}

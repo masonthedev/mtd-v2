@@ -14,6 +14,13 @@ body {
     font-style: normal;
 }
 
+.montserrat-thin-100 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
 /* NAV BAR */
 nav {
     position: fixed;
@@ -22,9 +29,15 @@ nav {
     top: 0;
     left: 0;
     padding: 5px 0;
-    background: rgba(0, 0, 0, 0.7); /* Initial opacity */
+    background: rgba(0, 0, 0, 0.8); /* Initial opacity */
+    /* transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out; */
     transition: background 0.5s;
     z-index: 10;
+}
+
+nav.show {
+    transform: translateY(0); /* Show navbar */
 }
 
 nav ul {
@@ -42,7 +55,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 #push-right {
@@ -60,7 +73,7 @@ nav ul li a {
     height: 100vh;
     position: relative;
     z-index: 1;
-    margin-top: 100px;
+    margin-top: 300px;
 }
 
 .hero h1 {
@@ -81,7 +94,7 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('keyboard.jpg');
+    background-image: url('images/mtd6.jpg');
     background-size: cover;
     background-position: center;
     -webkit-background-clip: text;
@@ -89,7 +102,7 @@ nav ul li a {
     color: transparent;
     z-index: -1;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 1s ease;
 }
 
 .hero h1:hover::before {
@@ -101,7 +114,7 @@ nav ul li a {
     -webkit-text-fill-color: transparent;
 }
 
-.hero h2 {
+.hero p {
     font-size: 4vw;
     color: white;
     margin-top: 5px;
